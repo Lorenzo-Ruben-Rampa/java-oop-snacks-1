@@ -3,10 +3,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Studente s1 = new Studente("Lorenzo", "Rampa", 32); 
+        Studente Io = new Studente("Lorenzo", "Rampa", 32);
+        Studente Lei = new Studente("Angelica", "Colombo", 28);
+        Studente Giulia = new Studente("Giulia", "Rossi", 28);
+        Studente Giulio = new Studente("Giulio", "Bianchi", 30);
         
         System.out.println("-------------------------------------");
-        System.out.println("Studente 1: " + s1.getData());
+        System.out.println("Studente 1: " + Io.getData());
+        System.out.println("Studente 2: " + Lei.getData());
+        System.out.println("Studente 3: " + Giulia.getData());  
+        System.out.println("Studente 4: " + Giulio.getData());
+        System.out.println("-------------------------------------");
 
         Scanner scanner = new Scanner(System.in);
         
