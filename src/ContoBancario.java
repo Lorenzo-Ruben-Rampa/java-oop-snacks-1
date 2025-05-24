@@ -12,8 +12,7 @@ public class ContoBancario {
         this.saldo = BigDecimal.ZERO; // saldo iniziale
     }
 
- // capacità prodotto
-
+ // CAPACITÀ:
     // --- METODI PRIVATI (utilità interna) ---
 
     private String randomCode() {

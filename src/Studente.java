@@ -9,11 +9,11 @@ public class Studente {
         this.cognome = cognome;
         this.età = età;
     }
-
+    //CAPACITÀ:
     //metodo per ottenere i dati dello studente
     public String getData() {
         if (nome != null & cognome != null & età > 0) {
-            return String.format("%s, %s, %d", nome, cognome, età);
+            return String.format("%s, %s, %d;", nome, cognome, età);
         }
         return "Dati errati";
         }

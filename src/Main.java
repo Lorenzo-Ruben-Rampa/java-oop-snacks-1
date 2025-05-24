@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // ------SNACK 1------
         Studente Io = new Studente("Lorenzo", "Rampa", 32);
         Studente Lei = new Studente("Angelica", "Colombo", 28);
         Studente Giulia = new Studente("Giulia", "Rossi", 28);
@@ -15,6 +16,18 @@ public class Main {
         System.out.println("Studente 4: " + Giulio.getData());
         System.out.println("-------------------------------------");
 
+        // ------SNACK 3-----
+        RegistroStudenti registroStudenti = new RegistroStudenti();
+        System.out.println("-------------------------------------");
+        System.out.println(registroStudenti);
+        registroStudenti.aggiungiStudente(Io);
+        registroStudenti.aggiungiStudente(Lei);
+        registroStudenti.aggiungiStudente(Giulia);
+        registroStudenti.aggiungiStudente(Giulio);
+        System.out.println(registroStudenti.toString());
+        System.out.println("-------------------------------------");
+
+        // ------SNACK 2------
         Scanner scanner = new Scanner(System.in);
         
         // Richiesta all'utente di inserire un IBAN
