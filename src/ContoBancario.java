@@ -7,7 +7,8 @@ public class ContoBancario {
 
     // Costruttore
     public ContoBancario(String iban, BigDecimal saldo) {
-        this.iban = generateIban();
+        // this.iban = generateIban();
+        this.iban = iban; // Imposta l'IBAN fornito
         this.saldo = BigDecimal.ZERO; // saldo iniziale
     }
 

@@ -12,7 +12,7 @@ public class Main {
         
         // Richiesta all'utente di inserire un IBAN
         System.out.print("Inserisci un IBAN italiano (formato ITXXY...): ");
-        String ibanInserito = scanner.nextLine().trim();
+        String ibanInserito = scanner.nextLine();
         
 // Verifica validità IBAN
         if (isValidIban(ibanInserito)) {
@@ -21,7 +21,7 @@ public class Main {
             ContoBancario cb1 = new ContoBancario(ibanInserito, BigDecimal.ZERO);
 
             System.out.println("-------------------------------------");
-            System.out.println("Conto Bancario 1: " + cb1.generateIban());
+            System.out.println("Conto Bancario 1: " + cb1.getIban().toUpperCase());
             System.out.println("Saldo iniziale " + cb1.getSaldo() + " euro");
             
             // Effettua un deposito di 1000€
@@ -31,7 +31,7 @@ public class Main {
             // Effettua un prelievo di 600€
             cb1.preleva(new BigDecimal("600"));
             System.out.println("Prelievo effettuato: -600 euro");
-            System.out.println("Saldo dopo prelievo: " + cb1.getSaldo() + " euro");
+            System.out.println("Saldo attuale: " + cb1.getSaldo() + " euro");
         } else {
             System.out.println("IBAN non valido!");
         }
@@ -40,7 +40,6 @@ public class Main {
     }
 
     public static boolean isValidIban(String iban) {
-        iban = iban.replace(" ", "").toUpperCase();
         
         // Verifica lunghezza e prefisso
         if (iban.length() != 27 || !iban.startsWith("IT")) {
