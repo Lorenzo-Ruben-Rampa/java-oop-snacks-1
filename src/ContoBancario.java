@@ -65,6 +65,11 @@ public class ContoBancario {
     public BigDecimal getSaldo() {
         return saldo;
     }
+
+    // Metodo per ottenere l'IBAN
+    public String getIban() {
+        return iban;
+    }
 }
 
 // Commented out code for iban generation and validation
